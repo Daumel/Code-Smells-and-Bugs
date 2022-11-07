@@ -1,6 +1,0 @@
-projectKey=code-smells-and-bugs
-serverUrl=http://localhost:9000
-serverVersion=9.7.0.61563
-dashboardUrl=http://localhost:9000/dashboard?id=code-smells-and-bugs
-ceTaskId=AYQ3izSM3cfhPD9Rockf
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYQ3izSM3cfhPD9Rockf
