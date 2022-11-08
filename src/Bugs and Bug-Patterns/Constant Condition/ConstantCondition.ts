@@ -5,7 +5,7 @@ export class ConstantCondition {
     }
 
     public runCheck(num: number) {
-        if (class {}) {
+        if (undefined) {
             if (num > 0) {
                 return true;
             }

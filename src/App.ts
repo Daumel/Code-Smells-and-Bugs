@@ -37,6 +37,7 @@ import {
 import {
     RelatedIfStatementsWithSameCondition
 } from "./Bugs and Bug-Patterns/Related If Statements With Same Condition/RelatedIfStatementsWithSameCondition";
+import {DeeplyNestedCode} from "./Code Smells/Deeply Nested Code/DeeplyNestedCode";
 
 // Bugs and Bug-Patterns
 console.log(new ConstantCondition());
@@ -56,7 +57,8 @@ console.log(new UsageOfOutputOfAVoidFunction('Testing'));
 
 // Code Smells
 console.log(new ComplexBooleanExpression());
-console.log(new DiverseCodeSmells(5, 5, 'Testing'));
+console.log(new DeeplyNestedCode(true, true, true));
+console.log(new DiverseCodeSmells(5));
 console.log(new DiverseCodeSmells2());
 console.log(new DuplicatedCode([]));
 console.log(new EmptyCodeBlock());
