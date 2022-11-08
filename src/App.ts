@@ -1,6 +1,5 @@
 import {ConstantCondition} from "./Bugs and Bug-Patterns/Constant Condition/ConstantCondition";
 import {ErrorIsNotThrown} from "./Bugs and Bug-Patterns/Error Is Not Thrown/ErrorIsNotThrown";
-import {GetterWithoutReturn} from "./Bugs and Bug-Patterns/Getter Without Return/GetterWithoutReturn";
 import {
     IgnoreStringOperationResult
 } from "./Bugs and Bug-Patterns/Ignore String Operation Result/IgnoreStringOperationResult";
@@ -12,11 +11,8 @@ import {
     SortingArrayWithoutCompareFunction
 } from "./Bugs and Bug-Patterns/Sorting Array Without Compare Function/SortingArrayWithoutCompareFunction";
 import {StatementWithoutImpact} from "./Bugs and Bug-Patterns/Statement Without Impact/StatementWithoutImpact";
-import {SwitchCaseWithBugPatterns} from "./Bugs and Bug-Patterns/SwitchCaseWithBugPatterns/SwitchCaseWithBugPatterns";
+import {SwitchCaseWithBugPatterns} from "./Bugs and Bug-Patterns/Switch Case With Bug Patterns/SwitchCaseWithBugPatterns";
 import {UnreachableCode} from "./Bugs and Bug-Patterns/Unreachable Code/UnreachableCode";
-import {
-    UsageOfNewForSomethingWithoutConstructor
-} from "./Bugs and Bug-Patterns/Usage Of New For Something Without Constructor/UsageOfNewForSomethingWithoutConstructor";
 import {
     UsageOfOutputOfAVoidFunction
 } from "./Bugs and Bug-Patterns/Usage Of Output Of A Void Function/UsageOfOutputOfAVoidFunction";
@@ -35,22 +31,28 @@ import {Child} from "./Bugs and Bug-Patterns/Constructor Of Derived Class Does N
 import {
     IrregularWhitespaceInJson
 } from "./Bugs and Bug-Patterns/Irregular Whitespace In JSON/IrregularWhitespaceInJson";
+import {
+    LiteralNumberThatLosesPrecision
+} from "./Bugs and Bug-Patterns/Literal Number That Loses Precision/LiteralNumberThatLosesPrecision";
+import {
+    RelatedIfStatementsWithSameCondition
+} from "./Bugs and Bug-Patterns/Related If Statements With Same Condition/RelatedIfStatementsWithSameCondition";
 
 // Bugs and Bug-Patterns
 console.log(new ConstantCondition());
+console.log(new Child(5));
 console.log(new ErrorIsNotThrown(5));
-console.log(new GetterWithoutReturn('Testing'));
 console.log(new IgnoreStringOperationResult());
+console.log(new IrregularWhitespaceInJson());
 console.log(new JumpStatementInFinallyBlock(5, 5));
+console.log(new LiteralNumberThatLosesPrecision());
 console.log(new NaNUsedInComparison('Testing'));
+console.log(new RelatedIfStatementsWithSameCondition(5));
 console.log(new SortingArrayWithoutCompareFunction());
 console.log(new StatementWithoutImpact(5));
 console.log(new SwitchCaseWithBugPatterns('Testing', 'Testing'));
 console.log(new UnreachableCode(5));
-console.log(new UsageOfNewForSomethingWithoutConstructor());
 console.log(new UsageOfOutputOfAVoidFunction('Testing'));
-console.log(new Child(5));
-console.log(new IrregularWhitespaceInJson());
 
 // Code Smells
 console.log(new ComplexBooleanExpression());

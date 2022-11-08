@@ -1,0 +1,35 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // Do not check rules that are not analyzed in the thesis
+        "prefer-const": "off",
+        "no-useless-escape": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+
+        // Configure code smell rules
+        "max-lines": ["warn", {"max": 900, "skipBlankLines": true, "skipComments": true }],
+        "max-lines-per-function": ["warn", { "max": 30, "skipBlankLines": true, "skipComments": true }],
+        "max-params": "warn",
+        "complexity": ["warn", 10],
+        //"@typescript-eslint/no-magic-numbers": ["warn", { "ignoreArrayIndexes": true, "ignoreDefaultValues": true, "ignore": [-1, 0, 1, 2]}],
+        //"id-length": ["warn", {"exceptions": ["i"]}],
+
+        // Configure bug and bug-pattern rules
+        "@typescript-eslint/no-unused-expressions": ["error", {"allowTernary": true}],
+        "no-unreachable": "error",
+        "default-case": "error",
+        "@typescript-eslint/require-array-sort-compare": ["error", {"ignoreStringArrays": true}],
+        "constructor-super": "error",
+        "no-irregular-whitespace": ["error", {"skipStrings": false}]
+    },
+    "ignorePatterns": []
+}
