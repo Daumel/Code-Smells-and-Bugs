@@ -115,14 +115,20 @@ export class LargeClass {
     }
 
     public getLength(arr: []) {
+        console.log('Array' + arr);
+        console.log('Get length');
         let count = 0;
+        console.log('Check each array item');
         arr.forEach(item => {
+            console.log('Item: ' + item)
             if (Array.isArray(item)) {
                 count += this.getLength(item);
             } else {
                 count++;
             }
         });
+        console.log('Got length for ' + arr);
+        console.log('Length is ' + count);
         return count;
     }
 

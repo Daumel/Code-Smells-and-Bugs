@@ -1,21 +1,8 @@
 export class DuplicatedCode {
 
     constructor(array: []) {
-        console.log(this.getLength(array));
         console.log(this.findTheSecondLargestNumber(array));
-    }
-
-    // Duplicated method with different parameter name
-    public getLength(array: []) {
-        let count = 0;
-        array.forEach(item => {
-            if (Array.isArray(item)) {
-                count += this.getLength(item);
-            } else {
-                count++;
-            }
-        });
-        return count;
+        console.log(this.getLength(array));
     }
 
     // Duplicated code fragment (14 lines)
@@ -35,5 +22,23 @@ export class DuplicatedCode {
         }
         console.log('Check ended');
         return secondLargest;
+    }
+
+    // Duplicated code fragment with different variable names (14 lines)
+    public getLength(arr: []) {
+        console.log('Get length');
+        let counter = 0;
+        console.log('Check each array item');
+        arr.forEach(item => {
+            console.log('Item: ' + item)
+            if (Array.isArray(item)) {
+                counter += this.getLength(item);
+            } else {
+                counter++;
+            }
+        });
+        console.log('Got length for ' + arr);
+        console.log('Length is ' + counter);
+        return counter;
     }
 }
